@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign-In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signin_style.css">
+</head>
+
+<body>
+    <div class="ui huge center aligned header" id="sigin_logo">E-Cloud</div>
+    
+    <div class="ui container hide" >
+        <h1>Sign In</h1>
+        <form id="signform" class="ui large form">
+            <div class="field">
+              <label>user Name</label>
+              <input id="user_in" type="text" name="user-name" placeholder="First Name" required>
+            </div>
+            <div class="field">
+              <label>Password</label>
+              <input id="pass_in" type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="field">
+            </div>
+            <div id="error_msg" class="ui error message">
+                <p>You can only sign up for an account once with a given e-mail address.</p>
+            </div>
+            <!-- <button class="ui button" type="submit">Submit</button> -->
+          </form>
+    </div>
+    
+    <div class="ui container" id="form_container">
+      <button class="ui button primary" id="cont_btn">Continue as a student</button>
+    </div>
+    
+    
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="utilities.js" async defer></script>
+    <script src="users.js" async defer></script>
+</body>
+
+</html>

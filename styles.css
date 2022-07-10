@@ -1,0 +1,308 @@
+#top_bar{
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #e0d9d9;
+    justify-content: space-between;
+    padding:0px 30px;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    background-color: #FFFFFF;
+    
+}
+
+#top_left{
+    padding: 20px;
+}
+
+#classes_container{
+    margin-top: 20px;
+}
+
+.class_name{
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: large;
+    font-weight: 500;
+    color: #5f6368;
+    margin-left: 8px;
+    text-align: center;
+    align-items: center;
+    
+    
+}
+
+#top_right{
+    padding: 20px;
+}
+
+
+#side_bar{
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.flex{
+    display: flex;
+} 
+
+.separator{
+    width: calc(100% + 10px);
+    height: 1px;
+    background-color: #e0d9d9 ;
+}
+
+
+
+#logo{
+    font-size: large;
+    margin-left: 15px;
+}
+
+
+.side_item_icon{
+    margin-left: 20px;
+}
+
+.side_item{
+    display: flex;
+    padding: 10px 5px;
+    height: 50px;
+    border-top-right-radius:15px ;
+    border-bottom-right-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.side_item:hover{
+    background-color: #C1C1C1;
+    cursor: pointer;
+}
+
+.side_item .icon{
+    margin-left: 15px;
+}
+
+.side_item_text{
+    margin-left: 25px;
+    margin-top: 2px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #3c4043;
+}
+
+#content_bar{
+    margin-top: 50px;
+    height: 100vh;
+    padding: 30px;
+}
+
+#nav_separate{
+    margin-bottom: 10px;
+    border-bottom:1px solid #e0d9d9 ;
+}
+
+
+
+.class_container{
+  padding: 30px;
+  height: 100vh;
+  margin-top: 70px;
+  
+}
+
+.class_header{
+    width: 100%;
+    position: relative;
+}
+
+.class_header img{
+    height: 250px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.class_nav{
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #5f6368;
+    
+}
+
+.class_nav:hover{
+    background-color: #F6F6F6;
+    cursor: pointer;
+}
+
+.selected{
+    background-color: #E8F0FE;
+}
+
+.posts_container{
+    
+    
+    margin: 10px 50px;
+    
+}
+
+.posts_container .card{
+    width: 100%;
+}
+
+.reply{
+    margin-bottom: 10px;
+}
+
+.class_image_text{
+    position: absolute;
+    bottom: 18px;
+    left: 26px;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 2.75rem;
+    color: #fff;
+    
+}
+
+#content_bar .card:hover{
+    cursor: pointer;
+}
+
+.hidden{
+    display: none !important;
+}
+
+#assignments_container{
+    margin-top: 20px;
+}
+
+#assignments_container .card{
+    width: 100%;
+}
+
+.assignment_desc{
+    border-top: none !important;
+}
+
+#materials_container{
+    margin-top: 40px;
+}
+
+
+.add_subm_btn{
+    background-color: white !important;
+    color: #1967d2 !important;
+}
+
+.add_subm_btn:hover{
+    background-color: #F6F9FD !important;
+}
+
+.assignment{
+    margin-bottom: 10px;
+}
+
+#dimmer_container{
+    height: 550px;
+    border-radius: 10px;
+    margin: 15%;
+    padding: 20px;
+    background-color: rgb(211, 217, 223);
+    color: black;
+}
+
+#dimmer_container table{
+    margin-top: 60px;
+    height: 400px;
+}
+
+#file_in{
+    display: none;
+}
+
+#submit_file_btn{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.empty_msg{
+    
+    display: flex !important;
+  justify-content: center;
+  align-items: center;
+    height: 300px;
+    font-size: xx-large;
+}
+
+#materials_videos_content{
+    margin-top: 10px;
+    
+}
+
+#materials_videos_content a{
+    font-size: 16px;
+  
+}
+#materials_videos_content .content{
+    padding: 10px;
+}
+
+#materials_docs{
+    border-top: 1px solid #C1C1C1;
+    margin-top: 60px;
+    padding-top: 40px;
+}
+
+#materials_docs .header{
+    margin-bottom: 25px;
+}
+
+#materials_externals{
+    border-top: 1px solid #C1C1C1;
+    margin-top: 60px;
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+#materials_externals .header{
+    margin-bottom: 25px;
+}
+
+#videos_container{
+    margin-top:30px ;
+}
+
+#videos_container button{
+    display: block;
+    margin: 0px auto;
+}
+
+.tiles_container{
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.video_tile{
+    height: 250px;
+    border-radius: 15px;
+    
+}
+
+#leave_meeting_btn:hover{
+    cursor: pointer;
+    font-weight: 900;
+    
+}
+
+#leave_meeting_btn{
+    margin-left: 30px;
+}
+
+#leave_meeting_container{
+    width: fit-content;
+    margin: 0px auto;
+}
+
+#leave_meeting_container p{
+    font-size: 18px;
+}

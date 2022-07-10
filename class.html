@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Class Name</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+    <div id="subm_dimmer" class="ui page dimmer">
+        <div id="dimmer_content" class="content ui container">
+          <div id="dimmer_container" >
+           
+          </div>
+        </div>
+    </div>
+    
+  
+    
+    
+    
+    <div id="side_bar" class="ui left vertical menu sidebar">
+         <a href="home.html"> 
+            <div class="side_item selected">
+                <i  class="large disabled home icon "></i>
+                <div class="side_item_text">Classes</div>
+            </div>
+        </a>
+        <div class="side_item ">
+            <i  class="large disabled calendar icon "></i>
+            <div class="side_item_text">Calendar</div>
+        </div>
+        
+        <div class="separator"></div>
+        
+    </div>
+    <div class="dimmed pusher">
+        <div id="top_bar" class="flex">
+            <div id="top_left" class="flex">
+                <i id="toggle_side_btn" class="large bars icon"></i>
+                <div class="class_name"> <p>  Class Name</p> </div>
+            </div>
+            <div id="top_mid" class="flex">
+              
+               
+                <div id="posts_nav" class="class_nav">
+                    Posts
+                </div>
+                <div id="materials_nav" class="class_nav">
+                    Study Materials
+                </div>
+                <div id="assignments_nav" class="class_nav">
+                    Assignments
+                </div>
+                <div id="videos_nav" class="class_nav">
+                  Video Chat
+                </div>
+                
+            </div>
+            <div id="top_right">
+                <i  class="big user circle icon"></i>
+            </div>
+        </div>
+        <div class="class_container ui container">
+            <div class="class_header">
+                
+            </div>
+            <div id="add_ok_msg" class="ui hidden success message">
+                <i class="close icon"></i>
+                <div class="header">
+                    <p style="text-align: center;">Added post successfully.</p>
+                </div>
+                
+              </div>
+              
+           
+              <div class="hidden" id="videos_container">
+                
+                
+                <audio style="display: none" id="meeting-audio"></audio>
+                
+                <button id="create_meeting_btn" class="ui teal button" onclick="createMeetingWithAttendee()"> create new meeting</button>
+                <button id="join_meeting_btn" class="ui teal button hidden" > Join Meeting</button>
+                
+                
+                
+                <div class="tiles_container ui three column doubling stackable grid" id="video-list">
+                  <!-- render video tiles from js -->
+                  
+                </div>
+                
+                <div class="hidden" id="leave_meeting_container" onclick="leaveCall()">
+                  <i id="leave_meeting_btn" class="x large icon circular red inverted"></i>
+                  <p> Leave Meeting </p>
+                </div>
+                
+                
+                
+                         
+              </div>  
+              
+              
+            <div class="hidden  posts_container">
+             
+              <!-- render posts from js -->
+                       
+            </div>
+            
+            <div class="hidden" id="assignments_container">
+                
+              <!-- render posts from js -->
+                
+            </div>
+            
+            <div class="hidden" id="materials_container">
+                
+               <div id="materials_videos">
+                    
+                  <h2 class="ui header" >
+                    <i class="circular play icon"></i>
+                    <div class="content">
+                      Recordings
+                    </div>
+                  </h2>
+                  
+                  <div class="ui four column doubling stackable grid " id="materials_videos_content">   
+                    <!--render from js-->
+                  </div>    
+                  
+                </div> 
+                
+                
+                
+                <div id="materials_docs">
+                    
+                    <h2 class="ui header" >
+                      <i class="circular file alternate icon"></i>
+                      <div class="content">
+                        Lectures Slides
+                      </div>
+                    </h2>
+                    
+                    <div class="ui four column doubling stackable grid " id="materials_docs_content">   
+                      <!-- render from js -->
+                    </div>    
+                    
+                  </div> 
+                  
+                  
+                  <div id="materials_externals">
+                    
+                    <h2 class="ui header" >
+                      <i class="circular book alternate icon"></i>
+                      <div class="content">
+                        External Reading
+                      </div>
+                    </h2>
+                    
+                    <div class="ui four column doubling stackable grid " id="materials_externals_content">   
+                      <!-- render from js -->
+                      
+                    </div>    
+                    
+                  </div> 
+                
+                  
+                
+                
+            </div>
+
+            
+            
+            
+        </div>
+        
+    </div>
+    
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.24.min.js"></script>
+    <script src="amazon-chime-sdk.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="utilities.js" async defer></script>
+    <script src="videochat.js" async defer></script>
+    <script src="class.js" async defer></script>
+</body>
+</html>
